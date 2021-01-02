@@ -17,7 +17,7 @@ const WithStaticProps = ({ items }: Props) => (
       Example fetching data from inside <code>getStaticProps()</code>.
     </p>
     <p>You are currently on: /users</p>
-    <List items={items} />
+    <List items={items} pathname="/users-ssg-fb-blocking" />
     <p>
       <Link href="/">
         <a>Go home</a>

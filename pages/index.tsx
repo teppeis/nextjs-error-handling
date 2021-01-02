@@ -1,15 +1,31 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import Link from "next/link";
 
 const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
-)
+  <main>
+    <h1>Next.js error handling test</h1>
+    <ul>
+      <li>
+        <Link href="/users-ssr">
+          <a>SSR</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/users-ssg-paths">
+          <a>SSG (paths, fallback: false)</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/users-ssg-fb-true">
+          <a>SSG (fallback: true)</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/users-ssg-fb-blocking">
+          <a>SSG (fallback: "blocking")</a>
+        </Link>
+      </li>
+    </ul>
+  </main>
+);
 
-export default IndexPage
+export default IndexPage;
